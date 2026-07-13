@@ -27,8 +27,8 @@ crucible_api_url = os.environ.get("CRUCIBLE_API_URL", "https://crucible.lbl.gov/
 crucible_api_key = get_secret("ADMIN_APIKEY", "crucible_admin_apikey/versions/4")
 
 # Queue this consumer listens on (+ its dead-letter queue for failures).
-QUEUE = "mosaic-stitcher"
-FAILED_QUEUE = "mosaic-stitcher-failed"
+QUEUE = "mosaic-stitch"
+FAILED_QUEUE = "mosaic-stitch-failed"
 
 # measurement/data_type stamped on the derived (stitched) child dataset.
 STITCH_MEASUREMENT = "stitched_mosaic"
