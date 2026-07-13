@@ -10,8 +10,8 @@ ENV UV_NO_DEV=1
 
 # Java runtime for ashlar: pyjnius starts a JVM at import time. curl kept for
 # debugging; JAVA_HOME must point at the installed JRE so pyjnius can find it.
-RUN apt-get update && apt-get install -y curl openjdk-17-jre-headless && rm -rf /var/lib/apt/lists/*
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+RUN apt-get update && apt-get install -y curl openjdk-21-jre-headless && rm -rf /var/lib/apt/lists/*
+ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 
 # get the code
 COPY pyproject.toml /root/
