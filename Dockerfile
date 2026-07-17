@@ -13,12 +13,11 @@ ENV UV_NO_DEV=1
 RUN apt-get update && apt-get install -y curl openjdk-21-jre-headless && rm -rf /var/lib/apt/lists/*
 ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 
-# get the code
-COPY pyproject.toml /root/
-COPY uv.lock /root/
-COPY .python-version /root/
-RUN /bin/uv sync --locked
+COPY pyproject.toml uv.lock .python-version /root/
+RUN /bin/uv sync --locked --no-install-project
+
 COPY ./src /root/
+RUN /bin/uv sync --locked
 
 # packages
 RUN uv sync
