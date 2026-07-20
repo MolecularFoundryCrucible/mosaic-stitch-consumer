@@ -50,4 +50,4 @@ steps:
     - CLOUDSDK_COMPUTE_REGION=us-central1
     - CLOUDSDK_CONTAINER_CLUSTER=crucible-cluster
 
-timeout: 600s
+timeout: 1200s

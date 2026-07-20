@@ -19,9 +19,6 @@ RUN /bin/uv sync --locked --no-install-project
 COPY ./src /root/
 RUN /bin/uv sync --locked
 
-# packages
-RUN uv sync
-
 # env vars
 ARG githash
 ENV GITHASH=$githash
