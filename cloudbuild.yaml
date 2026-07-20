@@ -13,7 +13,6 @@ steps:
       - -c
       - >
         docker build
-        --build-arg BUILDKIT_INLINE_CACHE=1
         --build-arg githash=$(git rev-parse HEAD)
         --build-arg repo=${REPO_NAME}
         --build-arg devenv=${BRANCH_NAME}
