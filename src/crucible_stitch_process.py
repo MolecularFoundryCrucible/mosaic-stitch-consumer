@@ -283,7 +283,7 @@ def _repackage_as_ifd_pyramid(src_path, dst_path, pixel_size_um=None):
     Two transforms, both driven by ashlar's own output:
       1. SubIFD levels -> top-level IFD pages.
       2. ashlar stores every channel as a separate "minisblack" plane (see the
-         FIXME in reg.PyramidWriter.run); when there are exactly 3 channels we
+         fixme in reg.PyramidWriter.run); when there are exactly 3 channels we
          interleave them to RGB so the browser renders true color.
 
     Lossless: reuses ashlar's stored levels and re-encodes with the same codec

@@ -13,6 +13,7 @@ steps:
       - -c
       - >
         docker build
+        --build-arg BUILDKIT_INLINE_CACHE=1
         --build-arg githash=$(git rev-parse HEAD)
         --build-arg repo=${REPO_NAME}
         --build-arg devenv=${BRANCH_NAME}
@@ -50,4 +51,4 @@ steps:
     - CLOUDSDK_COMPUTE_REGION=us-central1
     - CLOUDSDK_CONTAINER_CLUSTER=crucible-cluster
 
-timeout: 600s
+timeout: 1200s
